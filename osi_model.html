@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>OSI Model - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram-img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #1f3a93;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease forwards;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>OSI Model</h1>
+
+  <p>The OSI (Open Systems Interconnection) model is a fundamental framework that describes how different networking systems communicate with each other. It divides the networking process into seven distinct layers, each with its own role and responsibility.</p>
+
+  <p>Understanding the OSI Model helps troubleshoot network issues, design efficient systems, and understand how data flows across the internet or any networked environment.</p>
+
+  <!-- Diagram Image Inserted Here -->
+  <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/6ZH2Etm3LlFHTgmkjLmkxp/59ff240fb3ebdc7794ffaa6e1d69b7c2/osi_model_7_layers.png" alt="OSI Model Working Diagram" class="diagram-img">
+
+  <h2>Layers of OSI Model:</h2>
+
+  <h3>1️⃣ Physical Layer</h3>
+  <p>This is the hardware level that transmits raw bits over physical mediums like cables, fiber optics, and radio signals. 
+  <br><strong>Examples:</strong> Ethernet cables, Wi-Fi signals, electrical voltages, fiber optic cables.</p>
+
+  <h3>2️⃣ Data Link Layer</h3>
+  <p>Ensures reliable transmission over physical links by handling framing, addressing (MAC addresses), and error detection.
+  <br><strong>Examples:</strong> Switches, Network Interface Cards (NIC), Ethernet protocols.</p>
+
+  <h3>3️⃣ Network Layer</h3>
+  <p>Handles logical addressing and routing of data packets across different networks.
+  <br><strong>Examples:</strong> IP (Internet Protocol), Routers, IPv4, IPv6.</p>
+
+  <h3>4️⃣ Transport Layer</h3>
+  <p>Ensures complete data transfer using segmentation, error correction, and flow control.
+  <br><strong>Examples:</strong> TCP (Transmission Control Protocol), UDP (User Datagram Protocol).</p>
+
+  <h3>5️⃣ Session Layer</h3>
+  <p>Manages sessions between applications, controls dialog management, synchronization.
+  <br><strong>Examples:</strong> Remote Procedure Calls (RPC), NetBIOS sessions.</p>
+
+  <h3>6️⃣ Presentation Layer</h3>
+  <p>Responsible for data format translation, encryption, and compression.
+  <br><strong>Examples:</strong> SSL/TLS, JPEG, GIF, MP3 encoding/decoding.</p>
+
+  <h3>7️⃣ Application Layer</h3>
+  <p>Directly interacts with user applications providing services like email, file transfer, and browsing.
+  <br><strong>Examples:</strong> HTTP, FTP, SMTP, DNS, Web Browsers, Email Clients.</p>
+
+  <h2>🎯 Why OSI Model is Important?</h2>
+  <ul>
+    <li>Standardizes communication processes.</li>
+    <li>Makes troubleshooting easier by breaking down network problems.</li>
+    <li>Helps vendors build interoperable devices and protocols.</li>
+  </ul>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

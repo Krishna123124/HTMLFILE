@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sockets & Ports - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 2s ease forwards;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Sockets & Ports</h1>
+
+  <p>Sockets and Ports are crucial elements that allow multiple network applications to run simultaneously on the same machine without interfering with each other.</p>
+
+  <div class="diagram">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*hDYhMfc_xMzpFI7RItulnQ.png" alt="Sockets & Ports Diagram">
+  </div>
+
+  <h2>🧩 What is a Socket?</h2>
+  <p>A socket is a combination of an IP address and a port number. It uniquely identifies a network connection endpoint.</p>
+  <p><strong>Example:</strong> 192.168.1.5:80 (IP:Port)</p>
+
+  <h2>🧪 What is a Port?</h2>
+  <p>A port is simply a number assigned to specific processes or services on a device. It helps identify which application should handle the incoming or outgoing data.</p>
+
+  <h2>🛑 Common Port Numbers</h2>
+  <ul>
+    <li><strong>80:</strong> HTTP (Web traffic)</li>
+    <li><strong>443:</strong> HTTPS (Secure web traffic)</li>
+    <li><strong>21:</strong> FTP (File Transfer Protocol)</li>
+    <li><strong>25:</strong> SMTP (Email Sending)</li>
+    <li><strong>53:</strong> DNS (Domain Name System)</li>
+    <li><strong>22:</strong> SSH (Secure Shell)</li>
+  </ul>
+
+  <h2>⚙️ How Socket Communication Works:</h2>
+  <ol>
+    <li>Client creates a socket and connects to server's socket (IP + Port).</li>
+    <li>Server accepts connection and starts communication.</li>
+    <li>Data is exchanged back and forth via sockets.</li>
+    <li>After transmission, sockets are closed.</li>
+  </ol>
+
+  <h2>🎯 Why Important?</h2>
+  <ul>
+    <li>Allows multiple applications to run over a single IP address.</li>
+    <li>Segregates traffic for specific services.</li>
+    <li>Provides organized communication between client and server.</li>
+  </ul>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

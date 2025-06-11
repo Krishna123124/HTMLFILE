@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Routing Algorithms - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 2s ease forwards;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Routing Algorithms</h1>
+
+  <p>Routing algorithms are responsible for determining the best path for data to travel across a network from source to destination. Efficient routing ensures faster data delivery, reduced congestion, and optimized resource utilization.</p>
+
+  <div class="diagram">
+    <img src="https://prepbytes-misc-images.s3.ap-south-1.amazonaws.com/assets/1681212461476-1-01%20%2866%29.png" alt="Routing Algorithm Diagram">
+  </div>
+
+  <h2>Types of Routing Algorithms:</h2>
+
+  <h3>1️⃣ Distance Vector Routing</h3>
+  <p>Routers share information with their immediate neighbors about entire network distances. 
+  <br><strong>Example:</strong> RIP (Routing Information Protocol).</p>
+
+  <h3>2️⃣ Link State Routing</h3>
+  <p>Each router knows the entire network topology and calculates the shortest path using algorithms like Dijkstra.
+  <br><strong>Example:</strong> OSPF (Open Shortest Path First).</p>
+
+  <h3>3️⃣ Path Vector Routing</h3>
+  <p>Used mainly in inter-domain routing. Routers share full paths rather than just metrics.
+  <br><strong>Example:</strong> BGP (Border Gateway Protocol).</p>
+
+  <h2>Popular Algorithms:</h2>
+
+  <h3>🔸 Dijkstra's Algorithm (Shortest Path First)</h3>
+  <p>Calculates shortest path by building a tree of shortest paths from the source to all destinations.</p>
+
+  <h3>🔸 Bellman-Ford Algorithm</h3>
+  <p>Calculates shortest path considering negative weights but takes more time than Dijkstra.</p>
+
+  <h2>🎯 Why Routing is Important?</h2>
+  <ul>
+    <li>Ensures data reaches correct destination efficiently.</li>
+    <li>Minimizes network congestion & improves speed.</li>
+    <li>Handles dynamic changes in network topology.</li>
+  </ul>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

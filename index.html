@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Networking Visualizer</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body, html { height: 100%; background-color: #f5f7fa; scroll-behavior: smooth; }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 2rem; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); position: fixed; top: 0; width: 100%; z-index: 1000; }
+    nav h2 { color: #1f3a93; font-weight: bold; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav ul li a { color: #34495e; text-decoration: none; font-size: 1rem; transition: color 0.3s ease; }
+    nav ul li a:hover { color: #1f3a93; }
+    .splash { display: flex; align-items: center; justify-content: center; height: 100vh; background: linear-gradient(135deg, #ddefff, #e6f0fa); color: #1f3a93; flex-direction: column; animation: fadeIn 1.5s ease-in-out; text-align: center; position: relative; z-index: 999; }
+    .splash h1 { font-size: 3.5rem; background: linear-gradient(90deg, #1f3a93, #3498db); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: slideIn 2s ease forwards; opacity: 0; }
+    .splash p { font-size: 1.3rem; color: #34495e; margin-top: 1rem; animation: fadeInUp 2.5s ease forwards; opacity: 0; }
+    @keyframes slideIn { 0% { transform: translateY(-50px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeInUp { 0% { transform: translateY(30px); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
+    @keyframes fadeOut { 0% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(0.95); } }
+    .main-content { display: none; padding: 6rem 2rem 2rem; background: #f5f7fa; color: #2c3e50; min-height: 100vh; overflow-y: auto; animation: fadeInMain 1s ease forwards; }
+    @keyframes fadeInMain { 0% { opacity: 0; transform: translateY(50px); } 100% { opacity: 1; transform: translateY(0); } }
+    .topics { display: flex; flex-direction: column; gap: 1.5rem; max-width: 900px; margin: 0 auto; }
+    a.topic-card { background: #ffffff; border: 1px solid #3498db; border-radius: 18px; padding: 1.5rem; transition: transform 0.3s ease, box-shadow 0.3s ease; cursor: pointer; box-shadow: 0 4px 8px rgba(52, 152, 219, 0.15); text-align: left; color: inherit; text-decoration: none; display: block; }
+    a.topic-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(52, 152, 219, 0.3); color: inherit; text-decoration: none; }
+    .topic-card h3 { font-size: 1.4rem; color: #1f3a93; margin-bottom: 0.4rem; }
+    .topic-card p { font-size: 1rem; color: #34495e; }
+    .intro-section { margin-bottom: 3rem; text-align: center; }
+    .intro-section h2 { color: #1f3a93; margin-bottom: 1rem; font-size: 2rem; }
+    .intro-section p { font-size: 1.1rem; color: #2c3e50; max-width: 800px; margin: 0 auto; }
+    footer { text-align: center; padding: 2rem; color: #34495e; background-color: #ffffff; margin-top: 3rem; border-top: 1px solid #ddd; }
+  </style>
+</head>
+<body>
+
+<div class="splash" id="splash">
+  <h1>COMPUTER NETWORKING</h1>
+  <p>All Topics Explained with Interactive Simulations</p>
+</div>
+
+<nav id="navbar" style="display: none;">
+  <h2>Computer Networking</h2>
+  <ul>
+    <li><a href="#mainContent">Home</a></li>
+    <li><a href="#topicsSection">Topics</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="main-content" id="mainContent">
+  <div class="intro-section">
+    <h2>What is Computer Networking?</h2>
+    <p>Computer Networking is the discipline that enables the interconnection of computing devices to share data, applications, and resources efficiently. It forms the backbone of communication systems worldwide, from small-scale LANs to the vast global Internet. Networking includes both hardware (like routers, switches, and cables) and software (protocols and services). Over the decades, it has grown to support innovations such as cloud computing, IoT, 5G, and edge computing. A strong understanding of networking helps engineers build resilient and scalable digital infrastructures.</p>
+  </div>
+
+  <h2 style="margin-bottom: 2rem; color: #1f3a93; text-align: center;" id="topicsSection">Explore Networking Concepts Interactively</h2>
+
+  <div class="topics">
+    <a href="osi_model.html" class="topic-card"><h3>OSI Model</h3><p>The 7-layer model that standardizes communication functions in networks.</p></a>
+    <a href="dns_resolution.html" class="topic-card"><h3>DNS Resolution</h3><p>How domain names are translated to IP addresses in a step-by-step manner.</p></a>
+    <a href="packet_circuit_switching.html" class="topic-card"><h3>Packet vs Circuit Switching</h3><p>Understand the key differences in how data is transmitted in networks.</p></a>
+    <a href="ip_addressing_subnetting.html" class="topic-card"><h3>IP Addressing & Subnetting</h3><p>Learn how devices are identified and how networks are logically divided.</p></a>
+    <a href="arp_protocol.html" class="topic-card"><h3>ARP Protocol</h3><p>Maps IP addresses to MAC addresses in local networks.</p></a>
+    <a href="routing_algorithms.html" class="topic-card"><h3>Routing Algorithms</h3><p>Discover how routers find optimal paths using Dijkstra and Bellman-Ford.</p></a>
+    <a href="tcp_handshake.html" class="topic-card"><h3>TCP Handshake</h3><p>Three-way connection setup process for reliable communication.</p></a>
+    <a href="sockets_ports.html" class="topic-card"><h3>Sockets & Ports</h3><p>Mechanism for connecting applications on different devices via ports.</p></a>
+  </div>
+
+  <div style="text-align: center; margin-top: 4rem;">
+    <h3 style="color: #1f3a93;">Special Thanks</h3>
+    <p style="color: #34495e;">To <strong>Vijay Gadicha Sir</strong> for his continuous support and guidance.</p>
+  </div>
+
+  <footer id="contact">
+    <h3>Contact</h3>
+    <p>Email: dummyemail@example.com</p>
+    <p>Phone: +91-9876543210</p>
+  </footer>
+</div>
+
+<script>
+  setTimeout(() => {
+    const splash = document.getElementById('splash');
+    splash.style.animation = 'fadeOut 1s forwards';
+    setTimeout(() => {
+      splash.style.display = 'none';
+      document.getElementById('navbar').style.display = 'flex';
+      document.getElementById('mainContent').style.display = 'block';
+    }, 1000);
+  }, 3000);
+</script>
+
+</body>
+</html>

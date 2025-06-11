@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Packet vs Circuit Switching - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 2s ease forwards;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 1rem;
+      text-align: center;
+    }
+    th {
+      background-color: #1f3a93;
+      color: white;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Packet vs Circuit Switching</h1>
+
+  <p>Both packet switching and circuit switching are techniques used in networks to transmit data. Their approach, efficiency, and use cases differ significantly.</p>
+
+  <div class="diagram">
+    <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2023/03/Copy-of-sfdsfsd.drawio.png" alt="Packet vs Circuit Switching Diagram">
+  </div>
+
+  <h2>🔎 Key Comparison:</h2>
+
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>Packet Switching</th>
+      <th>Circuit Switching</th>
+    </tr>
+    <tr>
+      <td>Connection Type</td>
+      <td>Connectionless</td>
+      <td>Dedicated connection</td>
+    </tr>
+    <tr>
+      <td>Data Transmission</td>
+      <td>Data broken into packets</td>
+      <td>Continuous data stream</td>
+    </tr>
+    <tr>
+      <td>Resource Usage</td>
+      <td>Efficient (shared channels)</td>
+      <td>Inefficient (reserved path)</td>
+    </tr>
+    <tr>
+      <td>Setup Time</td>
+      <td>No setup required</td>
+      <td>Setup required before communication</td>
+    </tr>
+    <tr>
+      <td>Example</td>
+      <td>Internet, Emails, Web browsing</td>
+      <td>Traditional phone calls</td>
+    </tr>
+    <tr>
+      <td>Cost</td>
+      <td>Cheaper</td>
+      <td>Expensive</td>
+    </tr>
+    <tr>
+      <td>Failure Impact</td>
+      <td>Can reroute packets</td>
+      <td>Call drop if path breaks</td>
+    </tr>
+  </table>
+
+  <h2>🎯 Which is Better?</h2>
+  <p>Packet switching is generally more efficient, scalable, and suitable for modern data communications. However, circuit switching still has its advantages in real-time, constant bit rate communications like traditional telephony.</p>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

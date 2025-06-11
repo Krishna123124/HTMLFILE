@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DNS Resolution - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram-placeholder img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 2px solid #1f3a93;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      animation: pulse 2s infinite;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>DNS Resolution</h1>
+
+  <p>The Domain Name System (DNS) is like the phonebook of the internet. When users type domain names like google.com, DNS helps translate these names into IP addresses which computers use to identify each other on the network.</p>
+
+  <div class="diagram-placeholder">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*goSb1oow5UBNF3KkzvOX8A.png" alt="DNS Resolution Diagram">
+  </div>
+
+  <h2>DNS Resolution Steps:</h2>
+
+  <ol>
+    <li>User types a domain name in the browser (e.g., google.com).</li>
+    <li>Browser checks local DNS cache.</li>
+    <li>If not found, request is sent to DNS Recursive Resolver.</li>
+    <li>Resolver queries Root DNS server for TLD (Top Level Domain) info.</li>
+    <li>Root server responds with the TLD server address (e.g., .com server).</li>
+    <li>Resolver queries the TLD server for domain-specific name server.</li>
+    <li>TLD server responds with Authoritative Name Server address.</li>
+    <li>Resolver queries Authoritative Name Server to get the IP address.</li>
+    <li>Resolver returns IP to browser, which connects to the web server.</li>
+  </ol>
+
+  <h2>🎯 Why DNS is Important?</h2>
+  <ul>
+    <li>Eliminates the need to memorize complex IP addresses.</li>
+    <li>Helps in load balancing, redundancy, and scalability.</li>
+    <li>Provides fast access via caching mechanisms.</li>
+  </ul>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

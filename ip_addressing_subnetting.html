@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IP Addressing & Subnetting - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram-img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #1f3a93;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease forwards;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>IP Addressing & Subnetting</h1>
+
+  <p>IP Addressing is the system of assigning unique identifiers (IP addresses) to devices on a network. Subnetting divides large networks into smaller, more manageable segments to improve efficiency and security.</p>
+
+  <!-- Image inserted here -->
+  <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230714184807/Subnet-Cheat-Sheet.png" alt="IP Addressing & Subnetting Diagram" class="diagram-img">
+
+  <h2>🌐 IP Addressing</h2>
+  <p>An IP address consists of two parts: network ID and host ID.</p>
+  <p><strong>Example (IPv4):</strong> 192.168.1.10 (where 192.168.1 is the network and 10 is the host)</p>
+
+  <h3>IPv4 vs IPv6:</h3>
+  <ul>
+    <li><strong>IPv4:</strong> 32-bit (e.g., 192.168.1.1)</li>
+    <li><strong>IPv6:</strong> 128-bit (e.g., 2001:0db8:85a3::8a2e:0370:7334)</li>
+  </ul>
+
+  <h2>📊 Subnetting</h2>
+  <p>Subnetting helps divide a network into multiple smaller sub-networks (subnets) using subnet masks.</p>
+  <p><strong>Subnet Mask Example:</strong> 255.255.255.0</p>
+
+  <h3>Benefits of Subnetting:</h3>
+  <ul>
+    <li>Efficient IP address utilization</li>
+    <li>Improved network performance</li>
+    <li>Enhanced security and isolation</li>
+  </ul>
+
+  <h2>🛠 CIDR Notation:</h2>
+  <p>Classless Inter-Domain Routing (CIDR) simplifies subnetting using slash notation:</p>
+  <p><strong>Example:</strong> 192.168.1.0/24 means subnet mask 255.255.255.0</p>
+
+  <h2>🎯 Why IP Addressing & Subnetting Matter?</h2>
+  <ul>
+    <li>Enables structured network design</li>
+    <li>Optimizes routing and switching</li>
+    <li>Prevents IP conflicts and congestion</li>
+  </ul>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

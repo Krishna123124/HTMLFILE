@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>TCP Handshake - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram {
+      text-align: center;
+      margin: 2rem 0;
+      animation: fadeIn 2s ease forwards;
+    }
+    .diagram img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>TCP Handshake</h1>
+
+  <p>The TCP (Transmission Control Protocol) Handshake is a fundamental process that establishes a reliable connection between two devices on a network. It ensures both sender and receiver are ready for data transmission.</p>
+
+  <div class="diagram">
+    <img src="https://afteracademy.com/images/what-is-a-tcp-3-way-handshake-process-three-way-handshaking-establishing-connection-6a724e77ba96e241.jpg" alt="TCP Handshake Diagram">
+  </div>
+
+  <h2>🔄 The 3-Way Handshake Process:</h2>
+
+  <h3>1️⃣ SYN (Synchronize)</h3>
+  <p>The client sends a SYN message to initiate a connection and inform the server of its initial sequence number.</p>
+
+  <h3>2️⃣ SYN-ACK (Synchronize-Acknowledge)</h3>
+  <p>The server acknowledges the client's request by sending back SYN-ACK, including its own sequence number.</p>
+
+  <h3>3️⃣ ACK (Acknowledge)</h3>
+  <p>The client responds with an ACK message, confirming receipt of server's SYN-ACK, and connection is established.</p>
+
+  <h2>🎯 Importance of TCP Handshake:</h2>
+  <ul>
+    <li>Ensures both sides are ready for communication.</li>
+    <li>Enables reliable, ordered, and error-checked data transmission.</li>
+    <li>Prevents data loss and duplication.</li>
+  </ul>
+
+  <h2>🔒 Secure Handshake Extension:</h2>
+  <p>Protocols like TLS (Transport Layer Security) build upon TCP handshake for secure encrypted communications.</p>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>

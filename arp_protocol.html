@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ARP Protocol - Computer Networking</title>
+  <style>
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      margin: 0; 
+      padding: 0;
+      background: linear-gradient(135deg, #f5f7fa, #ddeeff);
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 1000px; 
+      margin: 3rem auto; 
+      background: #fff; 
+      padding: 2rem 3rem; 
+      border-radius: 15px; 
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      animation: fadeIn 1s ease forwards;
+    }
+    h1 {
+      text-align: center; 
+      color: #1f3a93;
+      margin-bottom: 2rem;
+      font-size: 3rem;
+      animation: slideInTop 1s ease forwards;
+    }
+    h2 {
+      margin-top: 1.5rem; 
+      color: #34495e;
+    }
+    p {
+      font-size: 1.1rem; 
+      line-height: 1.7;
+    }
+    .diagram-img {
+      display: block;
+      margin: 2rem auto;
+      max-width: 100%;
+      height: auto;
+      border: 2px solid #1f3a93;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      animation: fadeIn 1s ease forwards;
+    }
+    .back-button {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto 0;
+      padding: 0.8rem 2rem;
+      background-color: #1f3a93;
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.3s;
+    }
+    .back-button:hover {
+      background-color: #34495e;
+    }
+    ul, ol {
+      padding-left: 1.5rem;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    @keyframes slideInTop {
+      0% { transform: translateY(-80px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>ARP Protocol</h1>
+
+  <p>ARP (Address Resolution Protocol) plays a critical role in local networks. It allows devices to discover each other's MAC addresses given their IP addresses, enabling successful communication within the same network segment.</p>
+
+  <!-- Image inserted here -->
+  <img src="https://www.fourfaith.com/uploadfile/2022/0808/20220808105025195.jpg" alt="ARP Process Diagram" class="diagram-img">
+
+  <h2>🧩 Why is ARP Needed?</h2>
+  <p>Even though devices communicate using IP addresses at the Network Layer, actual data transmission on local networks happens using MAC (hardware) addresses. ARP bridges this gap by mapping IP addresses to MAC addresses.</p>
+
+  <h2>🛠 How ARP Works:</h2>
+  <ol>
+    <li>Device A wants to send data to Device B (knows its IP but not MAC).</li>
+    <li>Device A broadcasts an ARP request on the local network: "Who has IP 192.168.1.5?"</li>
+    <li>Device B replies with its MAC address: "192.168.1.5 is at MAC AA:BB:CC:DD:EE:FF".</li>
+    <li>Device A updates its ARP table and sends data directly using the MAC address.</li>
+  </ol>
+
+  <h2>📝 Real Life Analogy:</h2>
+  <p>Imagine you know your friend's house address but don’t know their phone number. You ask around (broadcast) and someone provides you the number (MAC address). Now you can directly call them (send data).</p>
+
+  <h2>🔒 ARP Table (Cache)</h2>
+  <p>Devices maintain a small in-memory ARP table for quick lookups to avoid broadcasting every time.</p>
+
+  <h2>⚠️ Security Concern - ARP Spoofing:</h2>
+  <p>Attackers can send fake ARP replies to mislead devices into sending data to wrong machines, which is called ARP poisoning.</p>
+
+  <h2>🎯 Why ARP is Important?</h2>
+  <ul>
+    <li>Enables devices to communicate directly on local networks.</li>
+    <li>Supports IP-to-MAC mapping dynamically.</li>
+    <li>Critical for smooth Ethernet & LAN operation.</li>
+  </ul>
+
+  <a href="index.html" class="back-button">⬅ Back to Home</a>
+</div>
+
+</body>
+</html>
